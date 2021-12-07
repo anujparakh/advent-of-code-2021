@@ -28,7 +28,7 @@ int main()
     ll avg = ceil(total / (double) (nums.size()));
 
     sort(nums.begin(), nums.end());
-
+    // Median would work too
     ll start = avg;
     ll lastCost = -1;
     map<ll, ll> costs;
