@@ -30,14 +30,14 @@ ll countFlashes(vector<vector<ll> > &octopii, vector<vector<bool> > &flashed)
         {
             if(octopii[i][j] >= 10 && !flashed[i][j]) // flash
             {
-                checkAndIncrease(octopii, i - 1, j);
-                checkAndIncrease(octopii, i - 1, j - 1);
-                checkAndIncrease(octopii, i - 1, j + 1);
-                checkAndIncrease(octopii, i, j - 1);
-                checkAndIncrease(octopii, i, j + 1);
-                checkAndIncrease(octopii, i + 1, j);
-                checkAndIncrease(octopii, i + 1, j - 1);
-                checkAndIncrease(octopii, i + 1, j + 1);
+                checkAndIncrease(octopii, i - 1, j); // up
+                checkAndIncrease(octopii, i - 1, j - 1); // up left
+                checkAndIncrease(octopii, i - 1, j + 1); // up right
+                checkAndIncrease(octopii, i, j - 1); // left
+                checkAndIncrease(octopii, i, j + 1); // right
+                checkAndIncrease(octopii, i + 1, j); // down
+                checkAndIncrease(octopii, i + 1, j - 1); // down left
+                checkAndIncrease(octopii, i + 1, j + 1); // down right
                 flashed[i][j] = true;
                 ++flashes;
                 flashes += countFlashes(octopii, flashed); // check again with increased
